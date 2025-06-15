@@ -1,0 +1,59 @@
+#wrapper{
+    display: flex;
+    width: 100%;
+}
+
+#left-sidebanner{
+    /* check border */
+    border: 1px solid red;
+
+    /* contents */
+    display: flex;
+    width: 7.5rem;
+    overflow: hidden;
+
+    transition: width 1s ease;
+}
+
+#main{
+    /* check border */
+    border: 1px solid blue;
+
+    /* contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+    padding: 0rem 7.5rem 0rem 0rem;
+
+    /* animation */
+    transition: width 1s ease;
+}
+
+#topbar{
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+#topbar img[alt="menu"]{
+    float: left;
+}
+
+#topbar img[alt="search"]{
+    float: right;
+}
+
+#title{
+    position: absolute;
+    left: 50%;
+}
+
+#left-sidebanner:not(.activate){
+    width: 0;
+}
