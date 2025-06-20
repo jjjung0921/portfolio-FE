@@ -3,6 +3,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
+  height: 100%;
 }
 
 @media (min-width: 38em) {
@@ -12,5 +13,13 @@ html {
 }
 
 body {
+  display:flex;
+
   overflow-x: hidden;
+  margin: 0 !important;
+}
+
+a{
+    color: black;
+    text-decoration-line: none;
 }

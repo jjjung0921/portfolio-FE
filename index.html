@@ -4,54 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jjjung's portfolio</title>
-    <link rel="stylesheet" href="./template/style/style.css" />
-    <link rel="stylesheet" href="./template/style/sidebar.css" />
+    <link rel="stylesheet" href="/template/style/style.css" />
+    <link rel="stylesheet" href="/template/style/sidebar.css" />
     <link rel="stylesheet" href="/template/template.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div id="left-sidebanner" class="activate">
-        <div class="wrapper">
-          <div id="profile">
-            <div id="profile-img">
-              <img src="./template/assets/img/profile.jpeg" alt="profile" />
-            </div>
-            <strong id="name">jjjung</strong>
-            <div id="introduction">Hello</div>
-            <div id="contact">
-              Follow me:
-              <a href="github.com"
-                ><img src="./template/assets/img/github.png" alt="github"
-              /></a>
-              <a href="email.com"
-                ><img src="./template/assets/img/email.png" alt="email"
-              /></a>
-            </div>
+    <div id="left-sidebanner" class="activate">
+      <div class="wrapper">
+        <div id="profile">
+          <div id="profile-img">
+            <img src="/template/assets/img/profile.jpeg" alt="profile" />
+          </div>
+          <strong id="name">jjjung</strong>
+          <div id="introduction">Hello</div>
+          <div id="contact">
+            Follow me:
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+              ><img src="/template/assets/img/github.png" alt="github"
+            /></a>
+            <a href="mailto:your-email@example.com"
+              ><img src="/template/assets/img/email.png" alt="email"
+            /></a>
           </div>
         </div>
-
-        <nav id="pages">
-          <span><a href="index.html">Home</a></span>
-          <span><a href="blog.html">Blog</a></span>
-          <span><a href="research.html">Research</a></span>
-          <span><a href="project.html">Project</a></span>
-        </nav>
       </div>
+      <nav id="pages">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="research.html">Research</a>
+        <a href="project.html">Project</a>
+        <div class="copyright">© 2025 Jungjin Lee. All rights reserved.</div>
+      </nav>
+    </div>
+
+    <div class="wrapper">
       <div id="main">
         <div id="topbar">
-          <div id="menu-btn">
-            <img
-              src="./template/assets/img/menu.svg"
-              alt="menu"
-              onClick="control_sidebar()"
-            />
+          <div id="menu-btn" onClick="control_sidebar()" role="button" tabindex="0" aria-label="Toggle menu">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <span id="title">jjjung portfolio</span>
-          <div id="search-btn"><img src="./template/assets/img/search.svg" alt="search" /></div>
+          <div id="search-btn">
+            <img src="/template/assets/img/search.svg" alt="search" />
+          </div>
         </div>
         <div id="content">content</div>
       </div>
     </div>
-    <script src="./template/js/sidebar.js"></script>
+    <script src="/template/js/sidebar.js"></script>
   </body>
 </html>

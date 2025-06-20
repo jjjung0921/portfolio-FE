@@ -1,81 +1,128 @@
-.wrapper{
-    display: flex;
-    width: 96%;
-    margin: 0 2%;
+.wrapper {
+  display: flex;
+  width: 100%;
 }
 
-#left-sidebanner{
-    /* check border */
-    border: 1px solid red;
+#left-sidebanner {
+  /* check border */
+  border: 1px solid red;
+  background-color: #d6cfc7;
+  box-shadow: 0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
 
-    /* contents */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  /* contents */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 
-    padding-top: 2%;
+  /* animation */
+  width: 16rem;
+  height: 100%;
+  padding-top: 2%;
+  overflow: hidden;
+  white-space: nowrap;
 
-    /* animation */
-    width: 12rem;
-    height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-
-    transition: width 1s ease;
+  transition: width 1s ease;
 }
 
-#main{
-    /* check border */
-    border: 1px solid blue;
+#main {
+  /* check border */
+  border: 1px solid blue;
 
-    /* contents */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* contents */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    flex-grow: 1;
+  flex-grow: 1;
 
-    /* animation */
-    transition: width 1s ease;
+  /* animation */
+  transition: width 1s ease;
 }
 
-#topbar{
-    display: flex;
-    align-items: center;
-    width: 95%;
-    height: 2.5rem;
-    justify-content: space-between;
-    position: relative; 
+#topbar {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 2.5rem;
+  justify-content: space-between;
+  position: relative;
 
-    padding-right: 5%;
-    border-bottom: 1px solid gray;
+  padding: 0.5rem 5% 0.5rem 0;
+  border-bottom: 1px solid gray;
 }
 
-#topbar > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#topbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#topbar img[alt="menu"]{
-    margin-left: 0;
+#topbar img[alt="menu"] {
+  margin-left: 0;
 }
 
-#title{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
+#menu-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 1.5rem; */
+  position: absolute;
+  left: 1rem; 
+  top: 50%; 
+  transform: translateY(-50%); 
+
+  background-color: #d6cfc7;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.25rem #d6cfc7;
 }
 
-#left-sidebanner:not(.activate){
-    width: 0;
+#menu-btn.activate {
+    background-color: white;
+    box-shadow: none;
+    z-index: 1;
 }
 
-img{
-    width: 100%;
-    height: 100%;
+#menu-btn.activate span{
+    background-color: #d6cfc7; /* 배경색을 #d6cfc7로 변경 */
+}
+
+#menu-btn > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18px;
+  height: 14px;
+}
+
+#menu-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fefefe;
+  border-radius: 1px;
+}
+
+#title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search-btn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 5%; /* #topbar의 padding-right 값과 동일하게 설정하여 정렬 */
+  top: 50%; /* 세로 중앙 정렬 */
+  transform: translateY(-50%); /* 세로 중앙 정렬 보정 */
+}
+
+#left-sidebanner:not(.activate) {
+  width: 0;
 }
