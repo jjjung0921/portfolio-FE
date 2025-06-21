@@ -6,6 +6,7 @@
     <title>jjjung's portfolio</title>
     <link rel="stylesheet" href="/template/style/style.css" />
     <link rel="stylesheet" href="/template/style/sidebar.css" />
+    <link rel="stylesheet" href="/template/style/header.css" />
     <link rel="stylesheet" href="/template/template.css" />
   </head>
   <body>
@@ -19,7 +20,10 @@
           <div id="introduction">Hello</div>
           <div id="contact">
             Follow me:
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
               ><img src="/template/assets/img/github.png" alt="github"
             /></a>
             <a href="mailto:your-email@example.com"
@@ -39,8 +43,14 @@
 
     <div class="wrapper">
       <div id="main">
-        <div id="topbar">
-          <div id="menu-btn" onClick="control_sidebar()" role="button" tabindex="0" aria-label="Toggle menu">
+        <header id="topbar">
+          <div
+            id="menu-btn"
+            onClick="control_sidebar()"
+            role="button"
+            tabindex="0"
+            aria-label="Toggle menu"
+          >
             <div>
               <span></span>
               <span></span>
@@ -48,10 +58,23 @@
             </div>
           </div>
           <span id="title">jjjung portfolio</span>
-          <div id="search-btn" onclick="control_search()" role="button" tabindex="0" aria-label="Search">
-            <img src="/template/assets/img/search.svg" alt="search" />
+          <div id="search-btn">
+            <img
+              src="/template/assets/img/search.svg"
+              alt="search"
+              onclick="control_search()"
+              role="button"
+              tabindex="0"
+              aria-label="Search"
+            />
+            <input
+              type="search"
+              placeholder="검색어를 입력하세요."
+              id="search-input"
+              maxlength="15"
+            />
           </div>
-        </div>
+        </header>
         <div id="content">content</div>
       </div>
     </div>
