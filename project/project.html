@@ -4,56 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jjjung's portfolio</title>
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="stylesheet" href="/style/sidebar.css" />
-    <link rel="stylesheet" href="/template.css" />
+    <link rel="stylesheet" href="/template/style/style.css" />
+    <link rel="stylesheet" href="/template/style/sidebar.css" />
+    <link rel="stylesheet" href="/template/style/header.css" />
+    <link rel="stylesheet" href="/template/template.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div id="left-sidebanner" class="activate">
-        <div class="wrapper">
-          <div id="profile">
-            <div id="profile-img">
-              <img src="/assets/img/profile.jpeg" alt="profile" />
-            </div>
-            <strong id="name">jjjung</strong>
-            <div id="introduction">Hello</div>
-            <div id="contact">
-              Follow me:
-              <a href="github.com"
-                ><img src="/assets/img/github.png" alt="github"
-              /></a>
-              <a href="email.com"
-                ><img src="/assets/img/email.png" alt="email"
-              /></a>
-            </div>
+    <div id="left-sidebanner" class="activate">
+      <div class="wrapper">
+        <div id="profile">
+          <div id="profile-img">
+            <img src="/template/assets/img/sidebar/profile.jpeg" alt="profile" />
+          </div>
+          <strong id="name">jjjung</strong>
+          <div id="introduction">Hello</div>
+          <div id="contact">
+            Follow me:
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="/template/assets/img/sidebar/github.png" alt="github"
+            /></a>
+            <a href="mailto:your-email@example.com"
+              ><img src="/template/assets/img/sidebar/email.png" alt="email"
+            /></a>
           </div>
         </div>
-
-        <nav id="pages">
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="research.html">Research</a>
-          <a href="project.html">Project</a>
-        </nav>
       </div>
+      <nav id="pages">
+        <a href="/index.html">Home</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="/research/research.html">Research</a>
+        <a href="/project/project.html">Project</a>
+        <div class="copyright">© 2025 Jungjin Lee. All rights reserved.</div>
+      </nav>
+    </div>
+
+    <div class="wrapper">
       <div id="main">
-        <div id="topbar">
-          <div id="menu-btn">
+        <header id="topbar">
+          <div
+            id="menu-btn"
+            onClick="control_sidebar()"
+            role="button"
+            tabindex="0"
+            aria-label="Toggle menu"
+          >
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <a href="/index.html" id="title">jjjung portfolio</a>
+          <div id="search-btn">
             <img
-              src="/assets/img/menu.svg"
-              alt="menu"
-              onClick="control_sidebar()"
+              src="/template/assets/img/header/search.svg"
+              alt="search"
+              onclick="control_search()"
+              role="button"
+              tabindex="0"
+              aria-label="Search"
+            />
+            <input
+              type="search"
+              placeholder="검색어를 입력하세요."
+              id="search-input"
+              maxlength="15"
             />
           </div>
-          <span id="title">jjjung portfolio</span>
-          <div id="search-btn">
-            <img src="/assets/img/search.svg" alt="search" />
-          </div>
-        </div>
+        </header>
         <div id="content">content</div>
       </div>
     </div>
-    <script src="/js/sidebar.js"></script>
+    <script src="/template/js/sidebar.js"></script>
   </body>
 </html>
